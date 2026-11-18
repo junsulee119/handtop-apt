@@ -1,0 +1,7 @@
+Origin: Handtop
+Label: Handtop
+Archive: trixie-stable
+Suite: trixie-stable
+Architecture: all
+Component: main
+Acquire-By-Hash: yes

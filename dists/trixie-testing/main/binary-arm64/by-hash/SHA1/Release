@@ -1,0 +1,7 @@
+Origin: Handtop
+Label: Handtop
+Archive: trixie-testing
+Suite: trixie-testing
+Architecture: arm64
+Component: main
+Acquire-By-Hash: yes
