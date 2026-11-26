@@ -1,0 +1,38 @@
+Package: handtop
+Priority: optional
+Section: metapackages
+Installed-Size: 1
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: all
+Version: 0.5.0
+Depends: handtop-core (= 0.5.0), handtop-desktop (= 0.5.0), handtop-video (= 0.5.0), handtop-keyring, handtop-platform-h700 (= 0.5.0)
+Filename: pool/main/h/handtop/handtop_0.5.0_all.deb
+Size: 1112
+MD5sum: 7e2efb848762d74d5c1d73c4e7ed24b7
+SHA1: 18a1890d20e5f630b92954c3397b6a9f695bb565
+SHA256: c33bf02b42ce2f095324b734119b3a746c3f5713af6ed98fd1b80b1b788555a0
+SHA512: 2d2b15d0d2a091d2c809a58f2c3cdd9703ed75fc1b523ef3d73d2dcdf6e3513a8de2a783aaa9fc659712f1937dba79b64b4ec5052b757df0d2f5965dce076e7c
+Description: Handtop desktop for handheld consoles
+ Metapackage: everything Handtop installs on top of Debian.
+Handtop-Changes:  Updates without reflashing: Handtop now updates itself from Apps → Update, and v0.4.0 / v0.4.1 cards can move over with one command. New: Update app Updates survive power cuts Going back Your changes are kept Moving a v0.4.0 or v0.4.1 card over Stable and Testing Video decoding is now an update like any other Some fixes still need a new image: the boot partition (kernel, U-Boot, device tree) is never... Known limits
+Handtop-Release: 0.5.0
+Homepage: https://github.com/junsulee119/handtop
+
+Package: handtop-platform-h700
+Priority: optional
+Section: metapackages
+Installed-Size: 1
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: all
+Version: 0.5.0
+Depends: handtop-modules-h700-7.2.0 (= 0.5.0)
+Filename: pool/main/h/handtop-platform-h700/handtop-platform-h700_0.5.0_all.deb
+Size: 804
+MD5sum: b54533b8049dc116971662019dee4523
+SHA1: 834d658c1ee6857b9d906a65e034d9a79ec85ca3
+SHA256: 8f347160b5e6dffc73d7e328611673ff41e56514568da0fe3e2fd5ea1d1ab9f4
+SHA512: ed91e463b57f13328a3bbbb26936828de5944fe9b1628a506e573237001d2f2ff47c570787acf5e7e1cfd21b016ddd9853798cf75cd704fbdb54fdcef3b3dec3
+Description: Handtop: Allwinner H700 platform
+ Pulls in the kernel modules for the kernel this image has.
+Homepage: https://github.com/junsulee119/handtop
+

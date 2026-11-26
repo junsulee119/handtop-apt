@@ -1,0 +1,739 @@
+Package: ffmpeg
+Priority: optional
+Section: video
+Installed-Size: 2092
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavcodec61 (>= 7:7.1.5), libavdevice61 (>= 7:7.1.5), libavfilter10 (>= 7:7.1.5), libavformat61 (>= 7:7.1.5), libavutil59 (>= 7:7.1.5), libpostproc58 (>= 7:7.1.5), libswresample5 (>= 7:7.1.5), libswscale8 (>= 7:7.1.5), libc6 (>= 2.41)
+Filename: pool/main/f/ffmpeg/ffmpeg_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 1598204
+MD5sum: e70c874e5a5c13d593a2842bdc782ff8
+SHA1: f0b75571d6dff63010fd534a471d09eaa532be4c
+SHA256: 55c3243b3a7c73609db9164d9a0463293f4d748d6895e826cc584f132ef56b9f
+SHA512: 29d71a99b3a8106f12302b184067df7cf5b0726a3d66664a7b758adabf6bb7783055e6e344d0f7dc4d57c4b77ed3192c1bd13c144223f99826fdabab1b5f2f46
+Description: Tools for transcoding, streaming and playing of multimedia files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This package contains:
+  * ffmpeg: a command line tool to convert multimedia files between formats
+  * ffplay: a simple media player based on SDL and the FFmpeg libraries
+  * ffprobe: a simple multimedia stream analyzer
+  * qt-faststart: a utility to rearrange Quicktime files
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: foreign
+
+Package: handtop
+Priority: optional
+Section: metapackages
+Installed-Size: 1
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: all
+Version: 0.5.0
+Depends: handtop-core (= 0.5.0), handtop-desktop (= 0.5.0), handtop-video (= 0.5.0), handtop-keyring, handtop-platform-h700 (= 0.5.0)
+Filename: pool/main/h/handtop/handtop_0.5.0_all.deb
+Size: 1112
+MD5sum: 7e2efb848762d74d5c1d73c4e7ed24b7
+SHA1: 18a1890d20e5f630b92954c3397b6a9f695bb565
+SHA256: c33bf02b42ce2f095324b734119b3a746c3f5713af6ed98fd1b80b1b788555a0
+SHA512: 2d2b15d0d2a091d2c809a58f2c3cdd9703ed75fc1b523ef3d73d2dcdf6e3513a8de2a783aaa9fc659712f1937dba79b64b4ec5052b757df0d2f5965dce076e7c
+Description: Handtop desktop for handheld consoles
+ Metapackage: everything Handtop installs on top of Debian.
+Handtop-Changes:  Updates without reflashing: Handtop now updates itself from Apps → Update, and v0.4.0 / v0.4.1 cards can move over with one command. New: Update app Updates survive power cuts Going back Your changes are kept Moving a v0.4.0 or v0.4.1 card over Stable and Testing Video decoding is now an update like any other Some fixes still need a new image: the boot partition (kernel, U-Boot, device tree) is never... Known limits
+Handtop-Release: 0.5.0
+Homepage: https://github.com/junsulee119/handtop
+
+Package: handtop-core
+Priority: optional
+Section: misc
+Installed-Size: 1288
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Version: 0.5.0
+Depends: systemd-timesyncd, libpam-systemd, dbus-user-session, polkitd, sudo, bash-completion, less, nano, micro, htop, git, curl, wget, xz-utils, unzip, file, usbutils, evtest, alsa-utils, rfkill, iw, wireless-regdb, zram-tools, openssh-server, openssh-client, tmux, mosh, network-manager, wpasupplicant, bluez, python3, python3-venv, pipx, python3-evdev, python3-dbus, cloud-guest-utils
+Filename: pool/main/h/handtop-core/handtop-core_0.5.0_arm64.deb
+Size: 254376
+MD5sum: 55ff4981373b6759f91c67bbbc14d062
+SHA1: b88074aa33e0d16b53c16103ad5f6a06c2df6377
+SHA256: 2fa01301247051eea42d6ff02c7d7697270f537e04b283a74f5387d462245a13
+SHA512: 667b0ea2d495e5570c7767f89c548830821704b8b57762ec3938bf1ec3931247bcd91b63b0127503595fc3ed4e67525fdb978b6efe1e871250fbc9bc9b2baec7
+Description: Handtop: input daemon, Controls, system services and helpers
+ Hardware-facing part of Handtop for H700 handhelds: the input daemon and its
+ Controls app, hardware set-up, panel and Bluetooth checks, External Controller
+ services, session scripts, udev rules, sudoers and polkit rules.
+Homepage: https://github.com/junsulee119/handtop
+
+Package: handtop-desktop
+Priority: optional
+Section: misc
+Installed-Size: 47967
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Version: 0.5.0
+Depends: handtop-core (= 0.5.0), libgl1-mesa-dri, libegl1, libgles2, pipewire, pipewire-pulse, pipewire-alsa, wireplumber, pavucontrol, labwc, xwayland, waybar, wlogout, mako-notifier, swaybg, xdg-utils, shared-mime-info, desktop-file-utils, wl-clipboard, wlrctl, grim, slurp, brightnessctl, swayidle, network-manager-gnome, lxpolkit, blueman, foot, thunar, udisks2, gvfs, exfatprogs, dosfstools, eject, mousepad, chromium, ristretto, tumbler, imv, qpdfview, mpv, python3-mpv, libva2, libva-drm2, xarchiver, adwaita-icon-theme, fonts-noto-core, fonts-noto-cjk, fonts-noto-color-emoji, kanshi, wlr-randr, wlopm, libglib2.0-bin, python3-gi, gir1.2-gtk-3.0, gir1.2-gtklayershell-0.1, libnotify-bin
+Filename: pool/main/h/handtop-desktop/handtop-desktop_0.5.0_arm64.deb
+Size: 7546208
+MD5sum: ff7740dd937d1d3e7100891df4c7662e
+SHA1: caa6dad733f1599fef4a58379907d10f9f156340
+SHA256: cd5912ac925219e94af65f1eeca59ea7d6f85ec9adab3a47b162088e246d7cd7
+SHA512: a81b9695c880ae496b6bfe233f55a41d6263e59eeda75365ab3264db7dce3273dc6b777a15dde22de0e77fce3302679c0a96081e90277988667d3d32574b82c6
+Description: Handtop: desktop look, themes and apps
+ The Handtop desktop: labwc, Waybar, drawer and power-menu configuration, the theme
+ system and nine built-in themes, icons and cursors, the media apps, the
+ volume and brightness bar, the boot screen and nwg-drawer.
+Homepage: https://github.com/junsulee119/handtop
+
+Package: handtop-keyring
+Priority: optional
+Section: misc
+Installed-Size: 3
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Version: 0.5.0
+Filename: pool/main/h/handtop-keyring/handtop-keyring_0.5.0_arm64.deb
+Size: 2544
+MD5sum: 9e12d0663a045715aa680067851b901f
+SHA1: e9b426c17314a0e30c622d696f2ae36aed8eb63e
+SHA256: 6d40848283f8b56154d0d56ec6565abea1644564b00d753de7cf41f0e539e5c1
+SHA512: f80fb61967ab704fa6fb715f6c661b2e14bb7637cd8a6730cecbad0515b6e631511e765c73089063500ab145869f6ad7eb20d7c6b72bea29cbcad9927f8f1047
+Description: Handtop: archive key, package source and FFmpeg pin
+ The public key Handtop's package archive is signed with, the source entry for
+ https://junsulee119.github.io/handtop-apt and the pin that keeps Handtop's FFmpeg
+ build (and Handtop's packages) ahead of Debian's.
+Homepage: https://github.com/junsulee119/handtop
+
+Package: handtop-modules-h700-7.2.0
+Priority: optional
+Section: kernel
+Installed-Size: 235
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Version: 0.5.0
+Filename: pool/main/h/handtop-modules-h700-7.2.0/handtop-modules-h700-7.2.0_0.5.0_arm64.deb
+Size: 63324
+MD5sum: 31e3984535b8875dcd0193fa20dbd10d
+SHA1: e8355bd823648cfb2098d0ca6d7d698cebd6865b
+SHA256: 816554d9cd6db044f1c56273dedaaf0f65fa97c5534287b1b2d725fa118cfb5a
+SHA512: 588bc951179a1f213cd463819f2bc400eec99403ee7ec0a6987c4ce1b717dff2cc86ebafd77e237d2dd015aba8c1785a91c695df9a9b1564c38d76ca751f5e0d
+Description: Handtop: kernel modules for ROCKNIX's H700 kernel 7.2.0
+ Video decoder (Cedrus, VP9 helper), wired Xbox 360 controller function, uhid for
+ Bluetooth LE input, and the gamepad driver with Handtop's vibration fix, built for
+ kernel 7.2.0 (KERNEL sha256 a349c7239839093f47dd75ebcde7a20796b84aed742e13b9c400fed7edbfadb3).
+Handtop-Kernel-Release: 7.2.0
+Handtop-Kernel-Sha256: a349c7239839093f47dd75ebcde7a20796b84aed742e13b9c400fed7edbfadb3
+Homepage: https://github.com/junsulee119/handtop
+
+Package: handtop-platform-h700
+Priority: optional
+Section: metapackages
+Installed-Size: 1
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: all
+Version: 0.5.0
+Depends: handtop-modules-h700-7.2.0 (= 0.5.0)
+Filename: pool/main/h/handtop-platform-h700/handtop-platform-h700_0.5.0_all.deb
+Size: 804
+MD5sum: b54533b8049dc116971662019dee4523
+SHA1: 834d658c1ee6857b9d906a65e034d9a79ec85ca3
+SHA256: 8f347160b5e6dffc73d7e328611673ff41e56514568da0fe3e2fd5ea1d1ab9f4
+SHA512: ed91e463b57f13328a3bbbb26936828de5944fe9b1628a506e573237001d2f2ff47c570787acf5e7e1cfd21b016ddd9853798cf75cd704fbdb54fdcef3b3dec3
+Description: Handtop: Allwinner H700 platform
+ Pulls in the kernel modules for the kernel this image has.
+Homepage: https://github.com/junsulee119/handtop
+
+Package: handtop-video
+Priority: optional
+Section: misc
+Installed-Size: 861
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Version: 0.5.0
+Depends: libva2, libavcodec61 (= 7:7.1.5-0+deb13u1+handtop1), libavdevice61 (= 7:7.1.5-0+deb13u1+handtop1), libavfilter10 (= 7:7.1.5-0+deb13u1+handtop1), libavformat61 (= 7:7.1.5-0+deb13u1+handtop1), libavutil59 (= 7:7.1.5-0+deb13u1+handtop1), libpostproc58 (= 7:7.1.5-0+deb13u1+handtop1), libswresample5 (= 7:7.1.5-0+deb13u1+handtop1), libswscale8 (= 7:7.1.5-0+deb13u1+handtop1), ffmpeg (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/h/handtop-video/handtop-video_0.5.0_arm64.deb
+Size: 259936
+MD5sum: e00a94f2bc0f621e1a9f1a249f379b39
+SHA1: 2c8be96920cd6c26c9e98ed102e3cf28ce2b93d2
+SHA256: c5d8ad6a20a1d021b6271647cff0b3879f8a26b3c09ffef6efa8b4884cc9ce81
+SHA512: 4226605c8ccc3d213791a794db2fe3a93a9e82236d92435b66915ae82a53dd0d86320cdc33de0d6e2caba2c82dbbba0149e7412ccc7d3060ce025b3a9007b870
+Description: Handtop: hardware video decoding
+ The VA-API driver for Allwinner's video engine (v4l2-request) and the exact
+ FFmpeg build with the V4L2 request API decoders that Handtop was tested with.
+Homepage: https://github.com/junsulee119/handtop
+
+Package: libavcodec-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 343
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavcodec61 (= 7:7.1.5-0+deb13u1+handtop1), libavutil-dev (= 7:7.1.5-0+deb13u1+handtop1), libswresample-dev (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/f/ffmpeg/libavcodec-dev_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 119372
+MD5sum: 18c92a218d53dde364c87bddd05e8032
+SHA1: 43efb825b2b23742174b0a87c807364abf32676f
+SHA256: c2d6867caf3dd9b47e6df4aa1175f4843e4617436d009c13cfa1b8a8e0205908
+SHA512: 0decbfea7f35408081d9fd01b307c8008a23f63d01448e2ab686a1e9eee3484aa77fc21028681ed612db876705e3156b74e1a80e82d4d21ad12eb5acf9d86da8
+Description: FFmpeg library with de/encoders for audio/video codecs - development files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides a generic encoding/decoding framework and
+ contains multiple decoders and encoders for audio, video and subtitle streams,
+ and several bitstream filters.
+ .
+ The shared architecture provides various services ranging from bit stream I/O
+ to DSP optimizations, and makes it suitable for implementing robust and fast
+ codecs as well as for experimentation.
+ .
+ This package contains the development files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavcodec61
+Priority: optional
+Section: libs
+Installed-Size: 12966
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavutil59 (= 7:7.1.5-0+deb13u1+handtop1), libswresample5 (>= 7:7.1.5), libc6 (>= 2.41), libdav1d7 (>= 1.5.1), libmp3lame0 (>= 3.100), libopus0 (>= 1.5.2), libva2 (>= 2.22.0), libvorbis0a (>= 1.3.7), libvorbisenc2 (>= 1.3.7), libvpx9 (>= 1.15.0), libx264-164 (>= 2:0.164.3108+git31e19f9), zlib1g (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/f/ffmpeg/libavcodec61_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 5084216
+MD5sum: bfe51cfa1acc824a4e411bef3f56aef5
+SHA1: 87b3b9bb689a0d44a6b3717b075540d5a11174bc
+SHA256: 26d2be0d9e946e7650a5a7f848b4c7814cf5e8596f94d632294d86cdda686d6e
+SHA512: f24955ae701d436ec89a39132cfb9957c0cdd3ed9dc80ed998dead81b894da4669902519e4d7fba843f5e4ec842955435d1051cdbef5f07877b3b58ce475127e
+Description: FFmpeg library with de/encoders for audio/video codecs - runtime files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides a generic encoding/decoding framework and
+ contains multiple decoders and encoders for audio, video and subtitle streams,
+ and several bitstream filters.
+ .
+ The shared architecture provides various services ranging from bit stream I/O
+ to DSP optimizations, and makes it suitable for implementing robust and fast
+ codecs as well as for experimentation.
+ .
+ This package contains the runtime files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavdevice-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 108
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavcodec-dev (= 7:7.1.5-0+deb13u1+handtop1), libavdevice61 (= 7:7.1.5-0+deb13u1+handtop1), libavfilter-dev (= 7:7.1.5-0+deb13u1+handtop1), libavformat-dev (= 7:7.1.5-0+deb13u1+handtop1), libavutil-dev (= 7:7.1.5-0+deb13u1+handtop1), libpostproc-dev (= 7:7.1.5-0+deb13u1+handtop1), libswscale-dev (= 7:7.1.5-0+deb13u1+handtop1), libswresample-dev (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/f/ffmpeg/libavdevice-dev_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 69092
+MD5sum: e0c0836bc7ac8d209beeae574aec941d
+SHA1: 539f84554f89ee0dcdaf7fd33d8bff217f8af41c
+SHA256: da0dc473e80bbb08558cd226c6764c57e0a0d76c478eba5c4a7049be4c67b2bb
+SHA512: 10c48cc77147b57a12394c9b9daa17ccc2aa72a373b34fc5c38788c43b906b774d294b50a4dcc114f509814a0dff4477c903000ac22e87b7e39ad248b4edee8f
+Description: FFmpeg library for handling input and output devices - development files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides a generic framework for grabbing from and rendering to
+ many common multimedia input/output devices, and supports several input and
+ output devices, including Video4Linux2, VfW, DShow, and ALSA.
+ .
+ This package contains the development files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavdevice61
+Priority: optional
+Section: libs
+Installed-Size: 223
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavcodec61 (>= 7:7.1.5), libavfilter10 (>= 7:7.1.5), libavformat61 (= 7:7.1.5-0+deb13u1+handtop1), libavutil59 (= 7:7.1.5-0+deb13u1+handtop1), libc6 (>= 2.41), libdrm2 (>= 2.4.89), libxcb1 (>= 1.12)
+Filename: pool/main/f/ffmpeg/libavdevice61_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 90492
+MD5sum: 1367bf5017fa0e2881bbd2a808b52e92
+SHA1: b51b6658131d37abd5dfa2ca61a093ccd6d4506b
+SHA256: 43e230ee7759446d4294305ca33a7e9d8baf74f6483f349a7e82280ccc19b2c4
+SHA512: 597d69e085e5e01285093103c3d6f5f8d9cda83db2a9431e75886381ca17bd1fd90399ce337d1a1ca537e2b065ba5a178d347a40c0e7fb77bd3081428146ff65
+Description: FFmpeg library for handling input and output devices - runtime files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides a generic framework for grabbing from and rendering to
+ many common multimedia input/output devices, and supports several input and
+ output devices, including Video4Linux2, VfW, DShow, and ALSA.
+ .
+ This package contains the runtime files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavfilter-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 160
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavcodec-dev (= 7:7.1.5-0+deb13u1+handtop1), libavfilter10 (= 7:7.1.5-0+deb13u1+handtop1), libavformat-dev (= 7:7.1.5-0+deb13u1+handtop1), libavutil-dev (= 7:7.1.5-0+deb13u1+handtop1), libpostproc-dev (= 7:7.1.5-0+deb13u1+handtop1), libswresample-dev (= 7:7.1.5-0+deb13u1+handtop1), libswscale-dev (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/f/ffmpeg/libavfilter-dev_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 80556
+MD5sum: a1a59c3a97da5053515f4afd80782d47
+SHA1: 9073f99fe6cc94cdc3776ff5f3d11d1bafdb3a72
+SHA256: a097d37946360ef40c55b8646f3f33cdcbfc5f49a87fe27b813bf554ef010b13
+SHA512: 2e3555b3c607748726d6371d314d20c49b92b61c2eebdfc7aa0084b5f0a83c7baee8766d60d347a0d9043401b267b061b226a143c8008e4a67de93af9426670c
+Description: FFmpeg library containing media filters - development files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides a generic audio/video filtering framework containing
+ several filters, sources and sinks.
+ .
+ This package contains the development files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavfilter10
+Priority: optional
+Section: libs
+Installed-Size: 4321
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavcodec61 (= 7:7.1.5-0+deb13u1+handtop1), libavformat61 (>= 7:7.1.5), libavutil59 (= 7:7.1.5-0+deb13u1+handtop1), libpostproc58 (>= 7:7.1.5), libswresample5 (>= 7:7.1.5), libswscale8 (>= 7:7.1.5), libc6 (>= 2.41), libass9 (>= 1:0.17.3), libfreetype6 (>= 2.13), libva2 (>= 2.22.0)
+Filename: pool/main/f/ffmpeg/libavfilter10_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 1374324
+MD5sum: 84d359f2b5e28fc3000c82ef2f774dea
+SHA1: ed3cbce2dac949609dfcad8c4cbca4c5da4bc193
+SHA256: 076536a25d1daac62943979844ead33c60b124d1fdb2e9b8072813cf8bf6f75e
+SHA512: 23e8c213598f7cff227f0c4482b27d9039c3971629095edcb4a86abfe5d60f98afadbf160b364eccdfb45f14815ec2884c135fd4333e2ad2a946eb5608bc1396
+Description: FFmpeg library containing media filters - runtime files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides a generic audio/video filtering framework containing
+ several filters, sources and sinks.
+ .
+ This package contains the runtime files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavformat-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 242
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavcodec-dev (= 7:7.1.5-0+deb13u1+handtop1), libavformat61 (= 7:7.1.5-0+deb13u1+handtop1), libavutil-dev (= 7:7.1.5-0+deb13u1+handtop1), libswresample-dev (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/f/ffmpeg/libavformat-dev_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 99604
+MD5sum: 0124af425a5b789fab689740322d96fc
+SHA1: 3e0f9ec7f8ba0721556f9f417737ed3c7f676a49
+SHA256: 57d982be75dc33e77d98332487cd774ff20e6e04555407706a86ecf875c62287
+SHA512: b4c7c780b186f285873fe9b383004b315cdd5470cc9e31208f1ef1980ca300fe4a65f7e35825429c2b937f3cd18d0fbb0387aa69861a8ccf0ac2a98ff5f95b33
+Description: FFmpeg library with (de)muxers for multimedia containers - development files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides a generic framework for multiplexing and demultiplexing
+ (muxing and demuxing) audio, video and subtitle streams. It encompasses
+ multiple muxers and demuxers for multimedia container formats. It also
+ supports several input and output protocols to access a media resource.
+ .
+ This package contains the development files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavformat61
+Priority: optional
+Section: libs
+Installed-Size: 2786
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavcodec61 (= 7:7.1.5-0+deb13u1+handtop1), libavutil59 (= 7:7.1.5-0+deb13u1+handtop1), libc6 (>= 2.41), libbz2-1.0, libgnutls30t64 (>= 3.7.0-0), libxml2 (>= 2.9.11), zlib1g (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/f/ffmpeg/libavformat61_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 1081004
+MD5sum: b138141afb85844fa12c8c5b51164f7d
+SHA1: 96b96785bd90625f829dfaec01c6504abdc4dfea
+SHA256: e86e1f7d3570a7db279d8930e682249e75e91e9de76570d9d68ceabfec198881
+SHA512: 5521e51043512cb5b4fed24d3fcc80cca80bd6c4a9133e75c0fc6a80dfce6299aed9c0a3742c9d9a99044e8e6024edc1865fdc3c32b20a3f0ec60b642db8664a
+Description: FFmpeg library with (de)muxers for multimedia containers - runtime files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides a generic framework for multiplexing and demultiplexing
+ (muxing and demuxing) audio, video and subtitle streams. It encompasses
+ multiple muxers and demuxers for multimedia container formats. It also
+ supports several input and output protocols to access a media resource.
+ .
+ This package contains the runtime files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavutil-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 785
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavutil59 (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/f/ffmpeg/libavutil-dev_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 194732
+MD5sum: c29603c25b7ae9acba27bdcbdf06ef47
+SHA1: efe7d9f3f157bed5591ee4c391af3f5b701034d0
+SHA256: 6ab5df03b5716fc840e0da9b844a06e1fb69a0bd906ba024a71b1ea6f7c09f7f
+SHA512: edfff91c478c8517872032a1f21df21da8a0f46cd161ea8be6c08d919c4307aa6f6184fb9b67aae2634c24039e7d4aceac367a7524c51c1a6c85277f9b2f1f43
+Description: FFmpeg library with functions for simplifying programming - development files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library is a utility library to aid portable multimedia programming.
+ It contains safe portable string functions, random number generators, data
+ structures, additional mathematics functions, cryptography and multimedia
+ related functionality (like enumerations for pixel and sample formats).
+ It is not a library for code needed by both libavcodec and libavformat.
+ The goal for this library is to be modular, small, efficient and useful.
+ .
+ This package contains the development files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libavutil59
+Priority: optional
+Section: libs
+Installed-Size: 927
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libc6 (>= 2.41), libx11-6 (>= 2:1.6.0), libdrm2 (>= 2.4.89), libudev1 (>= 257.13), libva-drm2 (>= 2.22.0), libva-x11-2 (>= 2.22.0), libva2 (>= 2.22.0), libvdpau1 (>= 1.5)
+Filename: pool/main/f/ffmpeg/libavutil59_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 343604
+MD5sum: 87dc689cc1bd114cef575d6962d8135f
+SHA1: 8dbadff56a56b79fcb0570ac318c4d9649f87ea6
+SHA256: 656b439545fd792681448d84c41c529f8e496ebf8b66de773a4ac4aca33347fd
+SHA512: 720d70836d458f9b12b304456c3c1d4f43c41badad67fa8cc4b3f9979fb4902ff3a9fc3d48716c4b9a6103e5de82920e38f3ff938b1a890927b88288f139ce3e
+Description: FFmpeg library with functions for simplifying programming - runtime files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library is a utility library to aid portable multimedia programming.
+ It contains safe portable string functions, random number generators, data
+ structures, additional mathematics functions, cryptography and multimedia
+ related functionality (like enumerations for pixel and sample formats).
+ It is not a library for code needed by both libavcodec and libavformat.
+ The goal for this library is to be modular, small, efficient and useful.
+ .
+ This package contains the runtime files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libpostproc-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 97
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavutil-dev (= 7:7.1.5-0+deb13u1+handtop1), libpostproc58 (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/f/ffmpeg/libpostproc-dev_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 66492
+MD5sum: 060a6396d21fa42515c39f5a2c3ddb1a
+SHA1: c9a19651e54b3961080f3a39aa8dc57ca2cbe512
+SHA256: a2ba2506863332c1fb50d13496fb2b6bc61139aeedb69abeab170bbc7449f4bb
+SHA512: 447667f3df1f6816863d75c8877449cfe4d781b6d4b7dbf21b033cbdc69bb21545103f5e320d63ffd8389c1a3a938de9a5f4749945c6a05c76d91cc4ba64fc0d
+Description: FFmpeg library for post processing - development files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides video post processing.
+ .
+ This package contains the development files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libpostproc58
+Priority: optional
+Section: libs
+Installed-Size: 158
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavutil59 (>= 7:7.1.5), libc6 (>= 2.41)
+Filename: pool/main/f/ffmpeg/libpostproc58_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 86284
+MD5sum: a407140a6ed92cde0286706d5ab54d62
+SHA1: b71cdaaf68495569f4d7ca2a1db0ecad66f83e86
+SHA256: 7802f9a3f1c8b3c43e30b65c458cb3b8583002b21f93e0c94b91d4d2bddc5d46
+SHA512: 061c9185e4795f414c901ea2594a78b05c5d80c64222e42d0c908fcbf0af6a7df49dadcba297c54cabbb4b5d3be6d0f0a3d0ca02267ac3eb1f915358840bce80
+Description: FFmpeg library for post processing - runtime files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library provides video post processing.
+ .
+ This package contains the runtime files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libswresample-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 116
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavutil-dev (= 7:7.1.5-0+deb13u1+handtop1), libswresample5 (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/f/ffmpeg/libswresample-dev_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 71936
+MD5sum: 88c533faf31973689d81cefaa8a28275
+SHA1: 7db1ac06d7c344a4c2a3b5800228132fb7fd3b60
+SHA256: ed84b0bd6e2a9a5384ddb2db2656342097340d9f59ed88e6bbee9bd90d88a7e6
+SHA512: a4c6b620ecf4711667c1e83716dae679f0f4d47e4f7d7088b8dc45e234015ec498fb784fe8595e37dc0ed1802d41d95663329b90fdb7d3926c565000209e58e8
+Description: FFmpeg library for audio resampling, rematrixing etc. - development files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library performs highly optimized audio resampling, rematrixing
+ and sample format conversion operations.
+ Specifically, this library performs the following conversions:
+  * Resampling is the process of changing the audio rate, for example from a
+    high sample rate of 44100Hz to 8000Hz. Audio conversion from high to low
+    sample rate is a lossy process. Several resampling options and algorithms
+    are available.
+  * Rematrixing is the process of changing the channel layout, for example from
+    stereo to mono. When the input channels cannot be mapped to the output
+    streams, the process is lossy, since it involves different gain factors
+    and mixing. Various other audio conversions (e.g. stretching and padding)
+    are enabled through dedicated options.
+  * Format conversion is the process of converting the type of samples, for
+    example from 16-bit signed samples to unsigned 8-bit or float samples.
+    It also handles packing conversion, when passing from packed layout (all
+    samples belonging to distinct channels interleaved in the same buffer), to
+    planar layout (all samples belonging to the same channel stored in a
+    dedicated buffer or "plane").
+ .
+ This package contains the development files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libswresample5
+Priority: optional
+Section: libs
+Installed-Size: 222
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavutil59 (>= 7:7.1.5), libc6 (>= 2.41)
+Filename: pool/main/f/ffmpeg/libswresample5_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 98684
+MD5sum: 8ba99998f745407ff0ed9704e67cd260
+SHA1: 4ac32de519f3c6cdc5d652fc101563abff5100fc
+SHA256: d62af7d26ee4285bee869050dec4b60605b4d93a93f1eb53e2d4f9a2da795647
+SHA512: 4e3783793122f6b82d0ca02535519083f2cdd08964cfc8910dcbbece74cf515cf5b3a144a5118c66efdfa25f2241fb93e029ffc2d3349040e50bd3159338c1a8
+Description: FFmpeg library for audio resampling, rematrixing etc. - runtime files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library performs highly optimized audio resampling, rematrixing
+ and sample format conversion operations.
+ Specifically, this library performs the following conversions:
+  * Resampling is the process of changing the audio rate, for example from a
+    high sample rate of 44100Hz to 8000Hz. Audio conversion from high to low
+    sample rate is a lossy process. Several resampling options and algorithms
+    are available.
+  * Rematrixing is the process of changing the channel layout, for example from
+    stereo to mono. When the input channels cannot be mapped to the output
+    streams, the process is lossy, since it involves different gain factors
+    and mixing. Various other audio conversions (e.g. stretching and padding)
+    are enabled through dedicated options.
+  * Format conversion is the process of converting the type of samples, for
+    example from 16-bit signed samples to unsigned 8-bit or float samples.
+    It also handles packing conversion, when passing from packed layout (all
+    samples belonging to distinct channels interleaved in the same buffer), to
+    planar layout (all samples belonging to the same channel stored in a
+    dedicated buffer or "plane").
+ .
+ This package contains the runtime files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libswscale-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 111
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavutil-dev (= 7:7.1.5-0+deb13u1+handtop1), libswscale8 (= 7:7.1.5-0+deb13u1+handtop1)
+Filename: pool/main/f/ffmpeg/libswscale-dev_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 70420
+MD5sum: b13980ced60904965deda61899aae309
+SHA1: 4b939d3f42472397ad73a93770993a27d9934c4d
+SHA256: 4d2256eab8d6d8f58a9a0461686a0b9589e06947c58a422742c86eebda329f7f
+SHA512: cd96b78f245fb19785fc6b58e10c10ccf28c19bbe1004c9874abf102faed2a6641c9ac9c2399031057f483dbb0f084115485bc1437133710c6c9c3c83bfed1ee
+Description: FFmpeg library for image scaling and various conversions - development files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library performs highly optimized image scaling and colorspace and pixel
+ format conversion operations.
+ Specifically, this library performs the following conversions:
+  * Rescaling is the process of changing the video size. Several rescaling
+    options and algorithms are available. This is usually a lossy process.
+  * Pixel format conversion is the process of converting the image format and
+    colorspace of the image, for example from planar YUV420P to RGB24 packed.
+    It also handles packing conversion, that is converts from packed layout
+    (all pixels belonging to distinct planes interleaved in the same buffer),
+    to planar layout (all samples belonging to the same plane stored in a
+    dedicated buffer or "plane"). This is usually a lossy process in case the
+    source and destination colorspaces differ.
+ .
+ This package contains the development files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
+Package: libswscale8
+Priority: optional
+Section: libs
+Installed-Size: 542
+Maintainer: Handtop <https://github.com/junsulee119/handtop>
+Architecture: arm64
+Source: ffmpeg (7:7.1.5-0+deb13u1+handtop1)
+Version: 7:7.1.5-0+deb13u1+handtop1
+Depends: libavutil59 (= 7:7.1.5-0+deb13u1+handtop1), libc6 (>= 2.41)
+Filename: pool/main/f/ffmpeg/libswscale8_7.1.5-0+deb13u1+handtop1_arm64.deb
+Size: 201592
+MD5sum: 1e4c380e0f2a6c8e299d48b52e5aa0aa
+SHA1: b17ed5f81a0c4744b7a764bbe6640766ffb28c67
+SHA256: 36528dd592e1f8d46f94cf6bac6bcb8c6c389656a1a96569e5c1b90bfaa09430
+SHA512: 11123694110269bf94cb375b039f3d3b5256b9b2a61092b07d383b26a1891232a09f2f3fd154df212efe88056ad3b713b4568448ae95c948a3cc82f6063a6690
+Description: FFmpeg library for image scaling and various conversions - runtime files
+ FFmpeg is the leading multimedia framework, able to decode, encode, transcode,
+ mux, demux, stream, filter and play pretty much anything that humans and
+ machines have created. It supports the most obscure ancient formats up to the
+ cutting edge.
+ .
+ This library performs highly optimized image scaling and colorspace and pixel
+ format conversion operations.
+ Specifically, this library performs the following conversions:
+  * Rescaling is the process of changing the video size. Several rescaling
+    options and algorithms are available. This is usually a lossy process.
+  * Pixel format conversion is the process of converting the image format and
+    colorspace of the image, for example from planar YUV420P to RGB24 packed.
+    It also handles packing conversion, that is converts from packed layout
+    (all pixels belonging to distinct planes interleaved in the same buffer),
+    to planar layout (all samples belonging to the same plane stored in a
+    dedicated buffer or "plane"). This is usually a lossy process in case the
+    source and destination colorspaces differ.
+ .
+ This package contains the runtime files.
+ .
+ Handtop build: Debian's ffmpeg 7:7.1.5-0+deb13u1 plus the V4L2 request API
+ hardware decoders for Allwinner's video engine (Cedrus).
+Homepage: https://ffmpeg.org/
+Multi-Arch: same
+
